@@ -3,13 +3,13 @@
 
 Welcome to my Advanced SQL Portfolio, where I demonstrate my ability to manipulate, analyze and derive insights from real-world business data using advanced SQL techniques inspired by **Amazon's global operations**. This project features complex joins, subqueries, common table expressions (CTEs), indexing, grouping and performance tuning through EXPLAIN statements.
 
-### 🔍 Objective:
+## 🔍 Objective:
 
 To showcase my SQL expertise using real-world queries that support data-driven business decisions — ideal for positions in data analysis, business intelligence and database management. It exhibits how SQL supports data-driven decisions at Amazon by enabling customer segmentation, operational efficiency, sales optimization and executive-level insights.
 
 ---
 
-### 📊 Use Case Overview
+## 📊 Use Case Overview
 
 This project simulates the analytics operations of Amazon by managing customers data, transactions, orders and payments to uncover business insights, optimize decision-making and improve operational efficiency, by:
 
@@ -21,7 +21,7 @@ This project simulates the analytics operations of Amazon by managing customers 
 
 * Provide insights on sales, customer engagement, and revenue contributions.
 
-### 🏢 Real-Life Company Application: Amazon
+## 🏢 Real-Life Company Application: Amazon
 Amazon processes billions of customer and transaction records daily. The company leverages advanced SQL to:
 
 🧠 Segment customers by demographics, behavior and Prime membership
@@ -271,7 +271,7 @@ Improve the performance of data queries powering dashboards and business decisio
 
 ---
 
-**Project Impact & Results Achieved**
+## Project Impact & Results Achieved
 
 ⚡ I successfully reduced query execution time on large-scale transactional datasets by over 40% through the strategic application of indexing and optimization techniques, significantly improving data retrieval speed and user experience.
 
@@ -283,18 +283,18 @@ Improve the performance of data queries powering dashboards and business decisio
 
 ---
 
-📌 Conclusion
+## 📌 Conclusion
 This project reflects how companies like Amazon use SQL not just for data retrieval, but for making strategic business decisions. From improving customer retention to boosting sales through data insights, SQL is a powerful tool when applied with purpose.
 
 ---
 
-**About Me:**
+## About Me:
 
 I am a data analyst passionate about solving real-world business problems through SQL, data storytelling and visual insights. I'm looking to work with forward-thinking companies leveraging data for innovation and success.
 
-### 🙌 Let's Connect
+## 🙌 Let's Connect
 
 Are you an employer or collaborator interested in high-impact data solutions?  
-Feel free to reach out on [LinkedIn](https://www.linkedin.com/in/ezekiel-balogun-39a14438) or explore more projects on [Hashnode](https://ezekieldatatech.hashnode.dev).
+Feel free to reach out on [LinkedIn](https://www.linkedin.com/in/ezekiel-balogun-39a14438) or explore more projects on [Hashnode](https://datatech.hashnode.dev).
 
 ***🔍 Star this repository and fork it to practice, learn or showcase your own SQL expertise!***
