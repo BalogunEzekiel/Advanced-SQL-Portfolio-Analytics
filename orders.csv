@@ -1,0 +1,6 @@
+OrderID,CustomerName,OrderDate,Product,Quantity,Price,Region
+1,"Gabriel Aliyu","2023-01-15 00:00:00",Laptop,2,350000,India
+2,"Brown Abu","2023-02-10 00:00:00",Phone,5,250000,Luxembourg
+3,"Janet Ugo","2023-03-20 00:00:00",Tablet,3,700000,USA
+4,"Abi Jude","2023-01-20 00:00:00",Phone,1,150000,Brazil
+5,"Garba Shehu","2023-04-05 00:00:00",Laptop,1,500000,UK
