@@ -170,25 +170,44 @@ FROM orders;
 * Grouping customers by age brackets
 
 SELECT CASE 
-  WHEN c.age < 20 THEN 'Under 20'
-  WHEN c.age BETWEEN 20 AND 29 THEN '20-29'
-  ...
-END AS age_group, SUM(t.amount_spent) ...
+
+WHEN c.age < 20 THEN 'Under 20'
+
+WHEN c.age BETWEEN 20 AND 29 THEN '20-29'
+
+WHEN c.age BETWEEN 30 AND 39 THEN '30-39'
+
+ELSE '40 and above'
+
+END AS age_group, SUM(t.amount_spent) AS total_amount_spent
+
 FROM customers c
-JOIN transactions t ...
+
+JOIN transactions t ON c.customer_id = t.customer_id
+
+WHERE c.age < 40
+
 GROUP BY age_group;
 
-***Use Case: Identify purchasing behavior by age group.***
+***Use Case: Identify purchasing behavior by age group. Target age-based promotions e.g. student deals or senior discounts.***
 
 ---
 
 **8. ⚡ Indexing & Performance Optimization**
 
-*-- Creating an index to speed up date-range queries*
+* Creating an index to speed up date-range queries
 
-CREATE INDEX idx_transaction_date ON transactions (transaction_date);
+CREATE INDEX idx_transaction_date
 
-***Use Case: Optimize query performance for large datasets.***
+ON transactions (transaction_date);
+
+SELECT *
+
+FROM transactions
+
+WHERE transaction_date BETWEEN '2023-05-13' AND '2023-05-31';
+
+***Use Case: Optimize query performance for large datasets. Speed up high-volume date-range queries for Black Friday or Prime Day analysis.***
 
 ---
 
