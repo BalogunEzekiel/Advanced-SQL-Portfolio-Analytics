@@ -62,8 +62,6 @@ RIGHT JOIN transaction t ON c.Customer_ID = t.Customer_ID;
 
 ***Use Case: Retrieve a comprehensive view of all customers and transactions, including those with no matching records. Even if a customer hasn’t made a transaction, include them in CRM analysis—essential for onboarding campaigns.***
 
----
-
 **2. 🏆 Top Customers by Spend**
 
 * Subquery to find customer with max total transaction amount
@@ -87,8 +85,6 @@ FROM transaction
 GROUP BY Customer_ID) sub);
 
 ***Use Case: Identify your most valuable customer based on transaction volume. Identify Amazon Prime customers with high purchase volumes for early product testing or premium support.***
-
----
 
 **3. 🗺️ Regional Customer Segmentation**
 
@@ -137,8 +133,6 @@ ORDER BY total_spent DESC;
 
 ***Use Case: Rank customers based on order value. Build recommendation engines based on lifetime order value.***
 
----
-
 **5. 💰 Revenue by Product & Region**
 
 * Grouped revenue with rollups
@@ -150,8 +144,6 @@ FROM orders
 GROUP BY Region, Product WITH ROLLUP;
 
 ***Use Case: Understand top-performing regions and products. Prioritize logistics to high-demand product-region combinations.***
-
----
 
 **6. 🗓️ Time Series Analysis**
 
@@ -197,8 +189,6 @@ GROUP BY age_group;
 
 ***Use Case: Identify purchasing behavior by age group. Target age-based promotions e.g. student deals or senior discounts.***
 
----
-
 **8. ⚡ Indexing & Performance Optimization**
 
 * Creating an index to speed up date-range queries
@@ -209,8 +199,6 @@ ON transactions (transaction_date);
 
 ***Use Case: Optimize query performance for large datasets. Speed up high-volume date-range queries for Black Friday or Prime Day.***
 
----
-
 **9. 🔍 Transaction Filtering**
 
 * Filter transactions within a date range
@@ -220,8 +208,6 @@ SELECT * FROM transactions
 WHERE transaction_date BETWEEN '2023-05-13' AND '2023-05-31';
 
 ***Use Case: Analyze campaign success for specific period f time, e.g: Black Fridays or Prime Days.***
-
----
 
 **10. 📈 Customer Transaction Summary**
 
@@ -237,8 +223,6 @@ GROUP BY c.customer_id, c.name;
 
 ***Use Case: Build loyalty profiles for Amazon Rewards.***
 
----
-
 **11. 📊 Execution Plan Analysis**
 
 * Query plan insight using EXPLAIN
@@ -253,7 +237,10 @@ GROUP BY c.customer_id, c.name;
 
 ***Use Case: Improve query efficiency and detect bottlenecks. Tune query execution for dashboards used by senior leadership.***
 
-✅ Key Skills Demonstrated
+---
+
+## Key Skills Demonstrated
+
 ✅ Advanced SQL Joins & Subqueries
 
 ✅ CTEs and Window Functions
@@ -282,22 +269,32 @@ Optimize delivery routes and fulfillment based on purchase patterns
 
 Improve the performance of data queries powering dashboards and business decisions
 
-**Project Impact & Results Acheived:**
+---
 
-⚡ Reduced query time on large transactional datasets by over 40% with proper indexing
+**Project Impact & Results Achieved**
 
-📍 Identified top-performing regions, leading to a 15% targeted sales increase in those areas
+⚡ I successfully reduced query execution time on large-scale transactional datasets by over 40% through the strategic application of indexing and optimization techniques, significantly improving data retrieval speed and user experience.
 
-🛍️ Improved marketing personalization through detailed customer segmentation, boosting repeat purchases by 12%
+📍 By analyzing sales data across various geographies, I was able to identify top-performing regions, which informed targeted strategies that led to a 15% increase in sales within those areas.
 
-📊 Enabled efficient BI dashboarding with time series data, supporting executive decisions on promotions and logistics
+🛍️ Through in-depth customer segmentation based on behavior, frequency and preferences, I contributed to more personalized marketing efforts that resulted in a 12% boost in repeat purchases and improved customer loyalty.
+
+📊 I facilitated efficient BI dashboarding by preparing and structuring time series data, which enabled clear visualization of trends and patterns. This supported executive decision-making on key areas such as promotions and logistics optimization.
 
 ---
-## 🙌 Let's Connect
+
+📌 Conclusion
+This project reflects how companies like Amazon use SQL not just for data retrieval, but for making strategic business decisions. From improving customer retention to boosting sales through data insights, SQL is a powerful tool when applied with purpose.
+
+---
+
+**About Me:**
+
+I am a data analyst passionate about solving real-world business problems through SQL, data storytelling and visual insights. I'm looking to work with forward-thinking companies leveraging data for innovation and success.
+
+### 🙌 Let's Connect
 
 Are you an employer or collaborator interested in high-impact data solutions?  
 Feel free to reach out on [LinkedIn](https://www.linkedin.com/in/ezekiel-balogun-39a14438) or explore more projects on [Hashnode](https://ezekieldatatech.hashnode.dev).
 
----
-
-**🔍 Star this repository and fork it to practice, learn, or showcase your own SQL expertise!**
+***🔍 Star this repository and fork it to practice, learn or showcase your own SQL expertise!***
