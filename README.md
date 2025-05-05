@@ -201,46 +201,51 @@ CREATE INDEX idx_transaction_date
 
 ON transactions (transaction_date);
 
-SELECT *
-
-FROM transactions
-
-WHERE transaction_date BETWEEN '2023-05-13' AND '2023-05-31';
-
-***Use Case: Optimize query performance for large datasets. Speed up high-volume date-range queries for Black Friday or Prime Day analysis.***
+***Use Case: Optimize query performance for large datasets. Speed up high-volume date-range queries for Black Friday or Prime Day.***
 
 ---
 
 **9. 🔍 Transaction Filtering**
 
-*-- Filter transactions within a date range*
+* Filter transactions within a date range
 
 SELECT * FROM transactions
+
 WHERE transaction_date BETWEEN '2023-05-13' AND '2023-05-31';
+
+***Use Case: Analyze campaign success for specific period f time, e.g: Black Fridays or Prime Days.***
 
 ---
 
 **10. 📈 Customer Transaction Summary**
 
-*-- Sales and transaction count per customer*
+* Sales and transaction count per customer
 
-SELECT c.customer_id, c.name, SUM(t.amount_spent), COUNT(t.transaction_id)
+SELECT c.customer_id, c.name, SUM(t.amount_spent) AS total_sales, COUNT(t.transaction_id) AS number_of_transactions
+
 FROM customers c
-LEFT JOIN transactions t ...
+
+LEFT JOIN transactions t ON c.customer_id = t.customer_id
+
 GROUP BY c.customer_id, c.name;
+
+***Use Case: Build loyalty profiles for Amazon Rewards.***
 
 ---
 
 **11. 📊 Execution Plan Analysis**
 
-*-- Query plan insight using EXPLAIN*
+* Query plan insight using EXPLAIN
 
-EXPLAIN SELECT c.customer_id, c.name, SUM(t.amount_spent), ...
+EXPLAIN SELECT c.customer_id, c.name, SUM(t.amount_spent) AS total_sales, COUNT(t.transaction_id) AS number_of_transactions
+
 FROM customers c
-LEFT JOIN transactions t ...
+
+LEFT JOIN transactions t ON c.customer_id = t.customer_id
+
 GROUP BY c.customer_id, c.name;
 
-***Use Case: Improve query efficiency and detect bottlenecks.***
+***Use Case: Improve query efficiency and detect bottlenecks. Tune query execution for dashboards used by senior leadership.***
 
 ✅ Key Skills Demonstrated
 ✅ Advanced SQL Joins & Subqueries
