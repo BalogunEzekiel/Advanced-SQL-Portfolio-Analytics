@@ -40,7 +40,7 @@ Amazon processes billions of customer and transaction records daily. The company
 
 * [customer](https://github.com/BalogunEzekiel/Advanced-SQL-Portfolio-Analytics/blob/main/customer.csv)
 
-* transaction
+* [transaction](https://github.com/BalogunEzekiel/Advanced-SQL-Portfolio-Analytics/blob/main/transaction.csv)
 
 **1. 🧩 Complex Joins**
 
@@ -114,9 +114,9 @@ WHERE Province = 'Florida';
 
 **Tables:**
 
-* orders
+* [orders](https://github.com/BalogunEzekiel/Advanced-SQL-Portfolio-Analytics/blob/main/orders.csv)
 
-* payments
+* [payments](https://github.com/BalogunEzekiel/Advanced-SQL-Portfolio-Analytics/blob/main/payments.csv)
 
 
 **4. 📦 Customer Spending Trends**
@@ -164,6 +164,12 @@ FROM orders;
 ***Use Case: Build monthly sales dashboards. Seasonal planning for major events like Black Friday or Prime Day.***
 
 ---
+
+**Tables:**
+
+* [customers](https://github.com/BalogunEzekiel/Advanced-SQL-Portfolio-Analytics/blob/main/customers.csv)
+
+* [transactions](https://github.com/BalogunEzekiel/Advanced-SQL-Portfolio-Analytics/blob/main/transactions.csv)
 
 **7. 👥 Age-Based Customer Segmentation**
 
