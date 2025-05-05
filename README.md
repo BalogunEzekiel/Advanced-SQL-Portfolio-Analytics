@@ -62,6 +62,8 @@ RIGHT JOIN transaction t ON c.Customer_ID = t.Customer_ID;
 
 ***Use Case: Retrieve a comprehensive view of all customers and transactions, including those with no matching records. Even if a customer hasn’t made a transaction, include them in CRM analysis—essential for onboarding campaigns.***
 
+---
+
 **2. 🏆 Top Customers by Spend**
 
 *-- Subquery to find customer with max total transaction amount*
@@ -85,6 +87,8 @@ FROM transaction
 GROUP BY Customer_ID) sub);
 
 ***Use Case: Identify your most valuable customer based on transaction volume. Identify Amazon Prime customers with high purchase volumes for early product testing or premium support.***
+
+---
 
 **3. 🗺️ Regional Customer Segmentation**
 
@@ -127,6 +131,8 @@ WITH customer_totals AS (
 SELECT CustomerName, total_spent FROM customer_totals ORDER BY total_spent DESC;
 Use Case: Rank customers based on order value.
 
+---
+
 **5. 💰 Revenue by Product & Region**
 
 *-- Grouped revenue with rollups*
@@ -136,6 +142,8 @@ FROM orders
 GROUP BY State, Product WITH ROLLUP;
 
 ***Use Case: Understand top-performing regions and products.***
+
+---
 
 **6. 🗓️ Time Series Analysis**
 
@@ -162,6 +170,8 @@ GROUP BY age_group;
 
 ***Use Case: Identify purchasing behavior by age group.***
 
+---
+
 **8. ⚡ Indexing & Performance Optimization**
 
 *-- Creating an index to speed up date-range queries*
@@ -170,12 +180,16 @@ CREATE INDEX idx_transaction_date ON transactions (transaction_date);
 
 ***Use Case: Optimize query performance for large datasets.***
 
+---
+
 **9. 🔍 Transaction Filtering**
 
 *-- Filter transactions within a date range*
 
 SELECT * FROM transactions
 WHERE transaction_date BETWEEN '2023-05-13' AND '2023-05-31';
+
+---
 
 **10. 📈 Customer Transaction Summary**
 
@@ -185,6 +199,8 @@ SELECT c.customer_id, c.name, SUM(t.amount_spent), COUNT(t.transaction_id)
 FROM customers c
 LEFT JOIN transactions t ...
 GROUP BY c.customer_id, c.name;
+
+---
 
 **11. 📊 Execution Plan Analysis**
 
