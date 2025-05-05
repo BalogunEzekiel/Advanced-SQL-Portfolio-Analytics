@@ -123,13 +123,14 @@ WHERE Province = 'Florida';
 
 *-- CTE for total customer spend*
 
-WITH customer_totals AS (
-  SELECT CustomerName, SUM(Quantity * Price) AS total_spent
-  FROM orders
-  GROUP BY CustomerName
-)
-SELECT CustomerName, total_spent FROM customer_totals ORDER BY total_spent DESC;
-Use Case: Rank customers based on order value.
+WITH customer_totals AS (SELECT CustomerName, SUM(Quantity * Price) AS total_spent
+FROM orders
+GROUP BY CustomerName)
+SELECT CustomerName, total_spent
+FROM customer_totals
+ORDER BY total_spent DESC;
+
+***Use Case: Rank customers based on order value. Build recommendation engines based on lifetime order value.***
 
 ---
 
@@ -137,11 +138,11 @@ Use Case: Rank customers based on order value.
 
 *-- Grouped revenue with rollups*
 
-SELECT State, Product, SUM(Quantity * Price) AS total_revenue
+SELECT Region, Product, SUM(Quantity * Price) AS total_revenue
 FROM orders
-GROUP BY State, Product WITH ROLLUP;
+GROUP BY Region, Product WITH ROLLUP;
 
-***Use Case: Understand top-performing regions and products.***
+***Use Case: Understand top-performing regions and products. Prioritize logistics to high-demand product-region combinations.***
 
 ---
 
@@ -149,9 +150,10 @@ GROUP BY State, Product WITH ROLLUP;
 
 *-- Extracting year and month for time-based trend analysis*
 
-SELECT OrderID, CustomerName, OrderDate, YEAR(OrderDate), MONTH(OrderDate), ...
+SELECT OrderID, CustomerName, OrderDate, YEAR(OrderDate) AS OrderYear, MONTH(OrderDate) AS OrderMonth, Product, Quantity, Price, Region
 FROM orders;
-Use Case: Build monthly sales dashboards.
+
+***Use Case: Build monthly sales dashboards. Seasonal planning for major events like Black Friday or Prime Day.***
 
 ---
 
