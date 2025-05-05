@@ -44,7 +44,7 @@ Amazon processes billions of customer and transaction records daily. The company
 
 **1. 🧩 Complex Joins**
 
-*-- Full Outer Join using UNION of LEFT and RIGHT Joins*
+* Full Outer Join using UNION of LEFT and RIGHT Joins
 
 SELECT c.Customer_ID AS customer_id, c.Name AS customer_name, c.Province, c.Income, t.Transaction_ID AS transaction_id, t.Amount, t.Transaction_Type, t.Date
 
@@ -66,7 +66,7 @@ RIGHT JOIN transaction t ON c.Customer_ID = t.Customer_ID;
 
 **2. 🏆 Top Customers by Spend**
 
-*-- Subquery to find customer with max total transaction amount*
+* Subquery to find customer with max total transaction amount
 
 SELECT c.Customer_ID, c.Name, c.Province, c.Income, total_amount
 
@@ -92,7 +92,7 @@ GROUP BY Customer_ID) sub);
 
 **3. 🗺️ Regional Customer Segmentation**
 
-*-- Customers in Texas and Folida provinces*
+* Customers in Texas and Folida provinces
 
 SELECT Customer_ID, Name, Province, Income
 
@@ -121,13 +121,18 @@ WHERE Province = 'Florida';
 
 **4. 📦 Customer Spending Trends**
 
-*-- CTE for total customer spend*
+* CTE for total customer spend
 
 WITH customer_totals AS (SELECT CustomerName, SUM(Quantity * Price) AS total_spent
+
 FROM orders
+
 GROUP BY CustomerName)
+
 SELECT CustomerName, total_spent
+
 FROM customer_totals
+
 ORDER BY total_spent DESC;
 
 ***Use Case: Rank customers based on order value. Build recommendation engines based on lifetime order value.***
@@ -136,10 +141,12 @@ ORDER BY total_spent DESC;
 
 **5. 💰 Revenue by Product & Region**
 
-*-- Grouped revenue with rollups*
+* Grouped revenue with rollups
 
 SELECT Region, Product, SUM(Quantity * Price) AS total_revenue
+
 FROM orders
+
 GROUP BY Region, Product WITH ROLLUP;
 
 ***Use Case: Understand top-performing regions and products. Prioritize logistics to high-demand product-region combinations.***
@@ -148,9 +155,10 @@ GROUP BY Region, Product WITH ROLLUP;
 
 **6. 🗓️ Time Series Analysis**
 
-*-- Extracting year and month for time-based trend analysis*
+* Extracting year and month for time-based trend analysis
 
 SELECT OrderID, CustomerName, OrderDate, YEAR(OrderDate) AS OrderYear, MONTH(OrderDate) AS OrderMonth, Product, Quantity, Price, Region
+
 FROM orders;
 
 ***Use Case: Build monthly sales dashboards. Seasonal planning for major events like Black Friday or Prime Day.***
@@ -159,7 +167,7 @@ FROM orders;
 
 **7. 👥 Age-Based Customer Segmentation**
 
-*-- Grouping customers by age brackets*
+* Grouping customers by age brackets
 
 SELECT CASE 
   WHEN c.age < 20 THEN 'Under 20'
