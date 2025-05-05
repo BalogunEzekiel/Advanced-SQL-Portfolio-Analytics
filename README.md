@@ -259,15 +259,17 @@ GROUP BY c.customer_id, c.name;
 
 ---
 
+**Optimization**
+
 Amazon, as a global e-commerce leader, extensively uses advanced SQL queries across its data infrastructure to:
 
-Segment millions of customers based on behavior and region
+* Segment millions of customers based on behavior and region
 
-Analyze product performance and revenue distribution across geographies
+* Analyze product performance and revenue distribution across geographies
 
-Optimize delivery routes and fulfillment based on purchase patterns
+* Optimize delivery routes and fulfillment based on purchase patterns
 
-Improve the performance of data queries powering dashboards and business decisions
+* Improve the performance of data queries powering dashboards and business decisions
 
 ---
 
