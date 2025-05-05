@@ -88,7 +88,7 @@ GROUP BY Customer_ID) sub);
 
 **3. 🗺️ Regional Customer Segmentation**
 
-*-- Customers in Washington and Folida provinces*
+*-- Customers in Texas and Folida provinces*
 
 SELECT Customer_ID, Name, Province, Income
 
