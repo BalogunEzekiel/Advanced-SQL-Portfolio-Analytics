@@ -1,5 +1,5 @@
 
-# 🎯 Advanced SQL Portfolio Analytics 🚀
+# 🎯 Advanced SQL Portfolio Analytics - Amazon Simulation 🚀
 
 Welcome to my Advanced SQL Portfolio, where I demonstrate my ability to manipulate, analyze and derive insights from real-world business data using advanced SQL techniques inspired by **Amazon's global operations**. This project features complex joins, subqueries, common table expressions (CTEs), indexing, grouping and performance tuning through EXPLAIN statements.
 
