@@ -1,7 +1,0 @@
-SELECT c.Customer_ID AS customer_id, c.Name AS customer_name, c.Province, c.Income, t.Transaction_ID AS transaction_id, t.Amount, t.Transaction_Type, t.Date
-FROM customer c
-LEFT JOIN transaction t ON c.Customer_ID = t.Customer_ID
-UNION
-SELECT c.Customer_ID AS customer_id, c.Name AS customer_name, c.Province, c.Income, t.Transaction_ID AS transaction_id, t.Amount, t.Transaction_Type, t.Date
-FROM customer c
-RIGHT JOIN transaction t ON c.Customer_ID = t.Customer_ID;
