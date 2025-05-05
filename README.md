@@ -38,7 +38,7 @@ Amazon processes billions of customer and transaction records daily. The company
 
 **Tables:**
 
-* customer
+* customer https://github.com/BalogunEzekiel/Advanced-SQL-Portfolio-Analytics/blob/main/customer.csv
 
 * transaction
 
