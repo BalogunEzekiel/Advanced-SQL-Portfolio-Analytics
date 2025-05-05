@@ -1,0 +1,1 @@
+-- SQL script for age group segmentation

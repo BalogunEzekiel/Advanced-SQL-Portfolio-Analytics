@@ -1,0 +1,1 @@
+-- SQL script for customer spending cte
