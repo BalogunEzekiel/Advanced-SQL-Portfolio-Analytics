@@ -297,6 +297,6 @@ I am a data analyst passionate about solving real-world business problems throug
 ## 🙌 Let's Connect
 
 Are you an employer or collaborator interested in high-impact data solutions?  
-Feel free to reach out on [LinkedIn](https://www.linkedin.com/in/ezekiel-balogun-39a14438](https://www.linkedin.com/in/ezekiel-balogun-39a14438?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) or explore more projects on my [Hashnode](https://datatech.hashnode.dev).
+Feel free to reach out on [LinkedIn](https://www.linkedin.com/in/ezekiel-balogun-39a14438?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) or explore more projects on my [Hashnode](https://datatech.hashnode.dev).
 
 ***🔍 Star this repository and fork it to practice, learn or showcase your own SQL expertise!***
