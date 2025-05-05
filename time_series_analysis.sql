@@ -1,1 +1,0 @@
--- SQL script for time series analysis
