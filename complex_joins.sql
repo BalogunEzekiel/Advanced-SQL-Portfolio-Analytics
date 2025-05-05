@@ -1,6 +1,3 @@
--- SQL script for joins and unions
--- Full Outer Join using UNION of LEFT and RIGHT Joins
-
 SELECT c.Customer_ID AS customer_id, c.Name AS customer_name, c.Province, c.Income, t.Transaction_ID AS transaction_id, t.Amount, t.Transaction_Type, t.Date
 FROM customer c
 LEFT JOIN transaction t ON c.Customer_ID = t.Customer_ID
