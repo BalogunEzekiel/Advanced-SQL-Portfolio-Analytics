@@ -241,21 +241,23 @@ GROUP BY c.customer_id, c.name;
 
 ## Key Skills Demonstrated
 
-✅ Advanced SQL Joins & Subqueries
+✅ Advanced `JOIN` operations (LEFT, RIGHT, UNION)
 
-✅ CTEs and Window Functions
+✅ Subqueries and Aggregations (`SUM`, `MAX`, `GROUP BY`)
 
-✅ Indexing and Performance Tuning
+✅ `WITH ROLLUP` for hierarchical totals
 
-✅ Time Series Analysis
+✅ CTEs (Common Table Expressions) for complex logic
+
+✅ CASE statements for customer segmentation
+
+✅ Index creation and performance tuning
 
 ✅ Business Intelligence-Oriented Queries
 
-✅ Query Plan Interpretation
+✅ `EXPLAIN` for SQL optimization
 
-✅ Data Aggregation and Grouping
-
-✅ Customer Segmentation and Cohort Analysis
+✅ Time Series Analysis (`YEAR()`, `MONTH()`, date ranges)
 
 ---
 
